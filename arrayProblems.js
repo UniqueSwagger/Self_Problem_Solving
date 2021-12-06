@@ -7,11 +7,10 @@ function arraySum(arr) {
 function average(arr) {
   return arraySum(arr) / arr.length;
 }
-
-function arrayMax(arr) {
+function arrayMaxNumber(arr) {
   return Math.max(...arr);
 }
-function arrayMin(arr) {
+function arrayMinNumber(arr) {
   return Math.min(...arr);
 }
 function arraySort(arr) {
@@ -34,7 +33,7 @@ function arrayInsert(arr, index, value) {
   return arr;
 }
 function arraySwap(arr, index1, index2) {
-  let temp = arr[index1];
+  const temp = arr[index1];
   arr[index1] = arr[index2];
   arr[index2] = temp;
   return arr;
@@ -58,16 +57,7 @@ function arrayFillN(arr, value, n) {
 function arrayRotate(arr, n) {
   return arr.slice(n).concat(arr.slice(0, n));
 }
-function arrayRotateN(arr, n) {
-  return arr.slice(n).concat(arr.slice(0, n));
-}
 function arrayRotateReverse(arr, n) {
-  return arr.slice(n).concat(arr.slice(0, n));
-}
-function arrayRotateReverseN(arr, n) {
-  return arr.slice(n).concat(arr.slice(0, n));
-}
-function arrayRotateReverseN(arr, n) {
   return arr.slice(n).concat(arr.slice(0, n));
 }
 function removeDuplicates(arr) {
@@ -75,4 +65,20 @@ function removeDuplicates(arr) {
 }
 function arrayDiff(arr1, arr2) {
   return arr1.filter((element) => !arr2.includes(element));
+}
+function findPositiveInArray(arr) {
+  return arr.filter((element) => element > 0);
+}
+function findNegativeInArray(arr) {
+  return arr.filter((element) => element < 0);
+}
+function arrayMaxString(arr) {
+  return arr.reduce((max, element) =>
+    element.length > max.length ? element : max
+  );
+}
+function arrayMinString(arr) {
+  return arr.reduce((min, element) =>
+    element.length < min.length ? element : min
+  );
 }
